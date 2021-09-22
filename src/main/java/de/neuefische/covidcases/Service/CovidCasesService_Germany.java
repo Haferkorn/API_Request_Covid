@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CovidCasesService {
+public class CovidCasesService_Germany {
     private CasesPerDayMapper casesPerDayMapper;
     private TotalCovidCasesMapper totalCovidCasesMapper;
     private APIService_Germany apiServiceGermany;
 
 
-    public CovidCasesService(CasesPerDayMapper casesPerDayMapper, TotalCovidCasesMapper totalCovidCasesMapper, APIService_Germany apiServiceGermany) {
+    public CovidCasesService_Germany(CasesPerDayMapper casesPerDayMapper, TotalCovidCasesMapper totalCovidCasesMapper, APIService_Germany apiServiceGermany) {
         this.casesPerDayMapper = casesPerDayMapper;
         this.totalCovidCasesMapper = totalCovidCasesMapper;
         this.apiServiceGermany = apiServiceGermany;
