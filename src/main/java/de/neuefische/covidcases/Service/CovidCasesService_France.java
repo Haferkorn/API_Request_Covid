@@ -22,7 +22,7 @@ public class CovidCasesService_France {
         this.apiService_france = apiService_france;
     }
 
-    public List<ModelTotalCovidCase> getFrenchCasesPerDay(){
+    public List<ModelTotalCovidCase> getFrenchConfirmedCases(){
         APIModel[] apiModels=apiService_france.getCovidApiCountryPerDay();
         return totalCovidCasesMapper.mapToConfirmedByDay(apiModels);
     }
