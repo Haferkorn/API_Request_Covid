@@ -1,5 +1,6 @@
 package de.neuefische.covidcases.Controller;
 
+import de.neuefische.covidcases.Model.ModelCasesPerDay;
 import de.neuefische.covidcases.Model.ModelTotalCovidCase;
 import de.neuefische.covidcases.Service.CovidCasesService_France;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,11 @@ public class CovidCasesController_France {
     @GetMapping
     public List<ModelTotalCovidCase>getAllFrenchConfirmedCases(){
         return covidCasesService_france.getFrenchConfirmedCases();
+    }
+
+    @GetMapping("actualperDay")
+    public List<ModelCasesPerDay>getFrenchCasesPerDay(){
+        return covidCasesService_france.getFrenchCasesPerDay();
     }
 
 }
