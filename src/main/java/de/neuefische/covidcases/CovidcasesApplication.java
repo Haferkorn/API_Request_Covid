@@ -1,6 +1,6 @@
 package de.neuefische.covidcases;
 
-import de.neuefische.covidcases.API.APIService;
+import de.neuefische.covidcases.API.Germany.APIService_Germany;
 import de.neuefische.covidcases.Mapper.CasesPerDayMapper;
 import de.neuefische.covidcases.Mapper.TotalCovidCasesMapper;
 import de.neuefische.covidcases.Service.CovidCasesService;
@@ -14,7 +14,7 @@ public class CovidcasesApplication {
 		SpringApplication.run(CovidcasesApplication.class, args);
 
 		TotalCovidCasesMapper mapper=new TotalCovidCasesMapper();
-		APIService api=new APIService();
+		APIService_Germany api=new APIService_Germany();
 		CasesPerDayMapper dayMapper=new CasesPerDayMapper();
 
 		CovidCasesService service = new CovidCasesService(dayMapper,mapper,api);
